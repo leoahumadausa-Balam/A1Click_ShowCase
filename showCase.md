@@ -48,54 +48,6 @@ flowchart TD
 ```
 
 
-# 🚀 A1Click - Sistema de Gestión de Inventario Resiliente (.NET + SQL Server)
-
-> **Sistema de Punto de Venta diseñado con arquitectura offline-first, integridad ACID y automatización de infraestructura.**
-
-[![Ver Demo en Video](https://img.youtube.com/vi/PONER_AQUI_ID_VIDEO/0.jpg)](PONER_AQUI_LINK_YOUTUBE)
-*(Clic en la imagen para ver la demo de 1 min)*
-
----
-
-## 📸 Galería Rápida
-
-| Venta Rápida (Teclado) | Alerta de Stock Automática |
-| :---: | :---: |
-| ![Venta Rápida](img/demo_venta.gif) | ![Alerta Stock](img/demo_alerta.gif) |
-
----
-
-## 🏗️ Arquitectura de Solución
-El sistema prioriza la integridad de datos y la trazabilidad forense, implementando un mecanismo de "Defensa en Profundidad" a nivel de base de datos.
-
-### Mecanismo de Seguridad y Auditoría (ACID)
-```mermaid
-flowchart TD
-    %% Estilos para diferenciar capas
-    classDef actor fill:#eceff1,stroke:#37474f,stroke-width:2px;
-    classDef sp fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
-    classDef table fill:#fff3e0,stroke:#e65100,stroke-width:2px;
-    classDef trigger fill:#fce4ec,stroke:#880e4f,stroke-width:2px,stroke-dasharray: 5 5;
-    classDef ledger fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
-
-    User([Usuario / App]):::actor -->|Intento de Cambio| SP(Stored Procedure<br/>Transaccional):::sp
-
-    subgraph SAFETY [Mecanismo de Seguridad ACID]
-        direction TB
-        SP -->|1. UPDATE Stock| Prod[(Tabla: Productos)]:::table
-        
-        Prod -.->|Dispara| Trg(Trigger: trg_productos_touch):::trigger
-        Trg -->|2. Actualiza Timestamp| Prod
-        
-        SP -->|3. INSERT Auditoría| Kardex[(Tabla: Movimientos<br/>Libro Mayor Inmutable)]:::ledger
-    end
-
-    Kardex -->|Registro Forense| Data1[Quién: Leonardo<br/>Qué: Venta<br/>Cuándo: 10:05:01]
-    Prod -->|Sincronización| Data2[Última Modificación:<br/>2023-10-27 10:05:01]
-
-    %% Nota de integridad
-    linkStyle 2,4 stroke:#2e7d32,stroke-width:3px;
-
 
 💻 Ingeniería de Software (Snippets Destacados)
 Nota: Este es un proyecto de código cerrado (Proprietary Software). Se presentan fragmentos clave para demostrar la calidad de la arquitectura.
