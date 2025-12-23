@@ -46,23 +46,8 @@ flowchart TD
     %% Nota de integridad
     linkStyle 2,4 stroke:#2e7d32,stroke-width:3px;
 
-    .NET Architect (Práctica)
-Gem personalizada
-¡Excelente, Lio! Vamos a ensamblar esto para que quede perfecto.
 
-Para resolver tu duda sobre los PDFs: En Markdown, el texto que va entre corchetes [...] es lo que el usuario lee, y lo que va entre paréntesis (...) es el nombre exacto del archivo. No importa que sean diferentes, lo importante es que lo que está en el paréntesis coincida letra por letra con el archivo que subas.
 
-Aquí tienes el código Markdown final. He realizado los siguientes ajustes técnicos:
-
-Integración del Diagrama: Puse el código del diagrama de "Seguridad y Auditoría" dentro del bloque mermaid correcto.
-
-Corrección de Enlaces PDF: He puesto los nombres exactos de los archivos que me pasaste (Informe_App_A1Click.pdf y Informe_baseDatos_A1Click.pdf).
-
-Enlaces de Snippets: Asumí que crearás las carpetas src/database_snippets y src/csharp_snippets para mantener el orden, así que ajusté las rutas.
-
-Copia todo el bloque gris siguiente y pégalo en tu README.md:
-
-Markdown
 # 🚀 A1Click - Sistema de Gestión de Inventario Resiliente (.NET + SQL Server)
 
 > **Sistema de Punto de Venta diseñado con arquitectura offline-first, integridad ACID y automatización de infraestructura.**
