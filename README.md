@@ -41,13 +41,11 @@ flowchart TD
     end
 
     Kardex -->|Registro Forense| Data1[Quién: Leonardo<br/>Qué: Venta<br/>Cuándo: 10:05:01]
-    Prod -->|Sincronización| Data2[Última Modificación:<br/>2023-10-27 10:05:01]
+    Prod -->|Sincronización| Data2[Última Modificación:<br/>2025-10-27 10:05:01]
 
     %% Nota de integridad
     linkStyle 2,4 stroke:#2e7d32,stroke-width:3px;
 ```
-
-
 
 💻 Ingeniería de Software (Snippets Destacados)
 Nota: Este es un proyecto de código cerrado (Proprietary Software). Se presentan fragmentos clave para demostrar la calidad de la arquitectura.
