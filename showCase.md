@@ -45,7 +45,7 @@ flowchart TD
 
     %% Nota de integridad
     linkStyle 2,4 stroke:#2e7d32,stroke-width:3px;
-
+```
 
 
 # 🚀 A1Click - Sistema de Gestión de Inventario Resiliente (.NET + SQL Server)
