@@ -11,7 +11,7 @@
 
 | Venta Rápida (Teclado) | Alerta de Stock Automática |
 | :---: | :---: |
-| ![Venta Rápida](img/Venta_Module.gif) | ![Alerta Stock](img/Alerta_Stock.gif) |
+| ![Venta Rápida](img/Venta_Module.gif) | ![Alerta Stock/Revision Manual](img/Alerta_Stock.gif) |
 
 ---
 
