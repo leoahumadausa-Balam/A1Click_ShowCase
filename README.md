@@ -9,7 +9,7 @@
 
 ## 📸 Galería Rápida
 
-| Venta Rápida (Teclado) | Alerta de Stock Automática |
+| Modulo de Ventas | Alerta Stock/Revision Manual |
 | :---: | :---: |
 | ![Venta Rápida](img/Venta_Module.gif) | ![Alerta Stock/Revision Manual](img/Alerta_Stock.gif) |
 
