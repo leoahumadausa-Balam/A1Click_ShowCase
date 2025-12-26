@@ -11,7 +11,7 @@
 
 | Modulo de Ventas | Alerta Stock/Revision Manual |
 | :---: | :---: |
-| ![Venta Rápida](img/Venta_Module.gif) | ![Alerta Stock/Revision Manual](img/Alerta_Stock.gif) |
+| ![Venta ](img/Venta_Module.gif) | ![Alerta Stock/Revision Manual](img/Alerta_Stock.gif) |
 
 ---
 
