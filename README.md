@@ -2,7 +2,7 @@
 
 > **Sistema de Punto de Venta diseñado con arquitectura offline-first, integridad ACID y automatización de infraestructura.**
 
-[![Ver Demo en Video](https://img.youtube.com/vi/PONER_AQUI_ID_VIDEO/0.jpg)](PONER_AQUI_LINK_YOUTUBE)
+[![Ver Demo en Video](https://img.youtube.com/vi/https://youtu.be/ePzkEeo-loo?si=_OM6xjMeVJK1uymZ/0.jpg)][(PONER_AQUI_LINK_YOUTUBE)](https://youtu.be/ePzkEeo-loo?si=_OM6xjMeVJK1uymZ)
 *(Clic en la imagen para ver la demo de 1 min)*
 
 ---
