@@ -1,7 +1,8 @@
 /* FRAGMENTO DE: sp_venta_registrar
-   L骻ica: Orquestaci髇 de transacci髇 ACID con Table-Valued Parameters.
+   L贸gica: Orquestaci贸n de transacci贸n ACID con Table-Valued Parameters.
    Fuente: Proyecto A1Click - Leonardo Ahumada
 */
+
 
 CREATE OR ALTER PROCEDURE dbo.sp_venta_registrar
     @CreadaPor        INT,
@@ -17,9 +18,9 @@ BEGIN
     BEGIN TRY
         BEGIN TRANSACTION;
 
-        -- 1. VALIDACI覰 DE NEGOCIO (Ej: M閠odo de Pago)
+        -- 1. VALIDACI脫N DE NEGOCIO (Ej: M茅todo de Pago)
         IF @MetodoPago NOT IN ('EFECTIVO','TARJETA')
-            THROW 50002, 'M閠odo de pago inv醠ido.', 1;
+            THROW 50002, 'M茅todo de pago inv谩lido.', 1;
 
         -- 2. INSERTAR CABECERA
         INSERT INTO dbo.ordenes (total, creada_por, id_cliente, observaciones)
@@ -32,13 +33,13 @@ BEGIN
         SELECT @IdOrden, TipoItem, IdProducto, IdServicio, Cantidad, PrecioUnitario
         FROM @Lineas;
 
-        -- 4. MOVIMIENTOS DE INVENTARIO (Auditor韆 y Descuento)
+        -- 4. MOVIMIENTOS DE INVENTARIO (Auditor铆a y Descuento)
         -- Se utiliza una tabla temporal para capturar el estado previo/nuevo
         INSERT INTO dbo.movimientos_inventario
             (id_producto, tipo_movimiento, cantidad, stock_previo, stock_resultante, referencia_orden, creado_por)
         SELECT 
             IdProducto, 'VENTA', Cantidad, StockPrevio, StockResultante, @IdOrden, @CreadaPor
-        FROM @MovimientosTemp; -- Calculado previamente en l骻ica interna
+        FROM @MovimientosTemp; -- Calculado previamente en l贸gica interna
 
         -- 5. REGISTRO FINANCIERO (Caja)
         INSERT INTO dbo.transacciones (id_orden, metodo_pago, monto, pagado_por)
@@ -48,6 +49,6 @@ BEGIN
     END TRY
     BEGIN CATCH
         IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION;
-        THROW; -- Re-lanza el error a la aplicaci髇 C#
+        THROW; -- Re-lanza el error a la aplicaci贸n C#
     END CATCH
 END
