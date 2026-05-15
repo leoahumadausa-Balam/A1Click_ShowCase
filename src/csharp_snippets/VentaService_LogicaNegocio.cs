@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using A1Click.Core.Entities;
 using A1Click.Core.Interfaces;
 
+
 namespace A1Click.Core.Services
 {
     /// <summary>
