@@ -6,6 +6,7 @@ using System.Text.Json; // Uso de librería nativa para alto rendimiento
 using A1Click.Core.Entities; // Ajusta según tu namespace real
 using A1Click.Core.Interfaces;
 
+
 namespace A1Click.Core.Services
 {
     /// <summary>
